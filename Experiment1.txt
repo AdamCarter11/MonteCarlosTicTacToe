@@ -1,0 +1,3 @@
+When you increase the amount of nodes it becomes more accurate (smarter)
+and if they have the same amount of nodes it should roughly equal out to a 50/50
+winrate. Higher node counter equals smarter bot.

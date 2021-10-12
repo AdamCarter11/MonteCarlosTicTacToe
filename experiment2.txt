@@ -1,0 +1,42 @@
+Experiment 2 - mcts_modified vs mcts_vanilla
+By Jonathan Lewis and Adam Carter
+
+Game 1:
+    1000 Nodes each over 20 games:
+        Draws    = 1
+        Modified = 13 - Winner
+        Vanilla  = 6
+
+Game 2:
+    1000 Nodes each over 20 games: (repeating to make sure it wasn't a fluke)
+        Draws    = 0
+        Modified = 13 - Winner
+        Vanilla  = 7
+
+Game 3:
+    100 Nodes each over 20 games: (reduced tree size)
+        Draws    = 0
+        Modified = 7
+        Vanilla  = 13 - Winner
+
+Game 4:
+    100 Nodes each over 20 games: (reduced tree size and repeating to make sure wasn't a fluke)
+        Draws    = 0
+        Modified = 12 - Winner
+        Vanilla  = 8
+
+Game 5:
+    100 Nodes each over 20 games: (score is 1-1 so deciding game)
+        Draws    = 0
+        Modified = 11 - Winner
+        Vanilla  = 9
+
+Analysis:
+
+At 1000 nodes, it would appear that our mcts_modified wins out over mcts_vanilla majority of the time.
+I feel confident about this result as both times modified won with 13 of the 20 possible games with
+little to no variation.
+Things started changing however when we reduced the tree size/node count.  At 100 Nodes, the 2
+trees started struggling to win over the other.  I think modified would still win most of the time
+due to the nature of it looking ahead, but sometimes it cannot just see enough moves and so the randomness
+of the vanilla tree can win out from under it.
